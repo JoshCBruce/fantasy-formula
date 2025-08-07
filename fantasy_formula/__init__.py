@@ -6,5 +6,5 @@ using the FastF1 API and the official 2025 scoring rules.
 
 from .main import FantasyScorer
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __all__ = ["FantasyScorer"]
