@@ -1,2 +1,0 @@
-[console_scripts]
-fantasy-calc = fantasy_formula.cli.main:main
