@@ -322,7 +322,7 @@ class DataPreprocessor:
         
         try:
             if hasattr(session, 'laps') and session.laps is not None:
-                driver_laps = session.laps.pick_driver(driver_abbr)
+                driver_laps = session.laps.pick_drivers(driver_abbr)
                 
                 # Look for pit stops in the lap data
                 for idx, lap in driver_laps.iterrows():

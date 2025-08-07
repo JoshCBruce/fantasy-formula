@@ -1,15 +1,16 @@
-"""Basic usage examples for Fantasy Formula."""
+"""Basic usage examples for Fantasy Formula using 2025 season data."""
 
 from fantasy_formula import FantasyScorer
 
 
 def basic_scoring_example():
-    """Basic example of calculating fantasy points."""
-    print("Fantasy Formula Basic Usage Example")
-    print("=" * 40)
+    """Basic example of calculating fantasy points for the 2025 F1 season."""
+    print("Fantasy Formula Basic Usage Example - 2025 Season")
+    print("=" * 50)
     
     # Initialize scorer for a specific race
-    scorer = FantasyScorer(season=2024, round_num=1)  # 2024 Bahrain GP
+    # Note: 2025 F1 season starts with Australian GP (Round 1)
+    scorer = FantasyScorer(season=2025, round_num=1)  # 2025 Australian GP
     
     try:
         # Calculate full event scores
@@ -54,11 +55,11 @@ def basic_scoring_example():
 
 
 def specific_driver_example():
-    """Example of calculating points for a specific driver."""
-    print("\nSpecific Driver Example")
-    print("=" * 40)
+    """Example of calculating points for a specific driver in 2025."""
+    print("\nSpecific Driver Example - 2025 Season")
+    print("=" * 45)
     
-    scorer = FantasyScorer(season=2024, round_num=1)
+    scorer = FantasyScorer(season=2025, round_num=1)
     
     try:
         # Calculate score for a specific driver
@@ -86,11 +87,11 @@ def specific_driver_example():
 
 
 def validation_example():
-    """Example of validating event data."""
-    print("\nData Validation Example")
-    print("=" * 40)
+    """Example of validating 2025 F1 event data."""
+    print("\nData Validation Example - 2025 Season")
+    print("=" * 45)
     
-    scorer = FantasyScorer(season=2024, round_num=1)
+    scorer = FantasyScorer(season=2025, round_num=1)
     
     try:
         validation_results = scorer.validate_event_data()
@@ -125,5 +126,5 @@ if __name__ == "__main__":
     
     print("\n" + "=" * 40)
     print("Examples completed!")
-    print("Note: Examples use 2024 data which may not be fully available.")
-    print("For testing purposes, try using completed race weekends.")
+    print("Note: Examples use 2025 data which may not be fully available.")
+    print("For testing purposes, try using completed race weekends from past seasons.")

@@ -153,7 +153,7 @@ class OvertakeCalculator:
         """
         try:
             # Get lap data for this driver and lap
-            driver_laps = session.laps.pick_driver(driver)
+            driver_laps = session.laps.pick_drivers(driver)
             lap_data = driver_laps[driver_laps['LapNumber'] == lap_number]
             
             if lap_data.empty:

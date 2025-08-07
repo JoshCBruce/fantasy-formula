@@ -66,7 +66,7 @@ class PitStopAnalyzer:
         pit_stops = []
         
         try:
-            driver_laps = session.laps.pick_driver(driver)
+            driver_laps = session.laps.pick_drivers(driver)
             
             if driver_laps.empty:
                 return pit_stops
@@ -182,7 +182,7 @@ class PitStopAnalyzer:
                         return str(team)
             
             # Fallback: try to get from lap data
-            driver_laps = session.laps.pick_driver(driver)
+            driver_laps = session.laps.pick_drivers(driver)
             if not driver_laps.empty:
                 team = driver_laps.iloc[0].get('Team')
                 if team and not pd.isna(team):
